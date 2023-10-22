@@ -1,3 +1,4 @@
+/*============RESETTING STYLES=========*/
 .link {
   text-decoration: none;
 }
@@ -53,14 +54,22 @@ ol {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+/*============COMMON STYLES=========*/
+
 body {
   font-family: "Roboto", sans-serif;
   color: #434455;
   background-color: #ffffff;
 }
 
+/*============HEADER STYLES=========*/
+
 .header-page {
-  border-bottom: 1px solid #e7e9fc;
+  background: #fff;
+  box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 2px 1px 0px rgba(46, 47, 66, 0.08);
 }
 
 .header-page-container {
@@ -114,6 +123,24 @@ body {
   letter-spacing: 0.02em;
   padding-bottom: 24px;
   padding-top: 24px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.studio::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 48px;
+  height: 4px;
+  border-radius: 2px;
+  background: #404bbf;
+  left: 0;
+  bottom: -1px;
+}
+
+.studio {
+  position: relative;
+  color: #404bbf;
 }
 
 address {
@@ -133,6 +160,7 @@ address {
   font-weight: 400;
   line-height: 1.5;
   letter-spacing: 0.02em;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link-contact:hover,
@@ -140,10 +168,21 @@ address {
   color: #404bbf;
 }
 
+/*============HERO STYLES=========*/
+
 .first-section {
   background: #2e2f42;
   padding-top: 188px;
   padding-bottom: 188px;
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(/images/people-office\ 1.jpg);
+  max-width: 1440px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .text-title-one {
@@ -168,14 +207,13 @@ address {
   letter-spacing: 0.04em;
   display: block;
   padding: 16px 32px;
-  align-items: flex-start;
-  gap: 10px;
   height: 56px;
   min-width: 169px;
   margin-left: auto;
   margin-right: auto;
   border: none;
   border-radius: 4px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button:hover,
@@ -183,9 +221,22 @@ address {
   background-color: #404bbf;
 }
 
+/*============STRENGHTS STYLES=========*/
+
 .second-section {
   padding-top: 120px;
   padding-bottom: 120px;
+}
+
+.icon-strenghts-fon {
+  display: flex;
+  border-radius: 4px;
+  border: 1px solid #8e8f99;
+  background: #f4f4fd;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 8px;
+  height: 112px;
 }
 
 .list-strenghts {
@@ -203,6 +254,8 @@ address {
   width: calc((100% - 72px) / 4);
 }
 
+/*============TEAM STYLES=========*/
+
 .list-team {
   display: flex;
   gap: 24px;
@@ -211,6 +264,28 @@ address {
 .team-conteiner {
   padding-left: 15px;
   padding-right: 15px;
+}
+
+.cocial-icon-team {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #4d5ae5;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cocial-icon-team:hover,
+.cocial-icon-team:focus {
+  background-color: #404bbf;
+}
+
+.cocial-icon-grop {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
 }
 
 .text-title-two {
@@ -264,13 +339,19 @@ address {
   line-height: 1.5;
   letter-spacing: 0.02em;
   text-align: center;
+  margin-bottom: 8px;
 }
 
 .list-team-item {
   background-color: #ffffff;
   width: calc((100% - 24px * 3) / 4);
   border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
+
+/*============PORTFOLIO STYLES=========*/
 
 .section-portfolio {
   padding: 120px 0 120px 0;
@@ -290,6 +371,33 @@ address {
 
 .list-portfolio-item {
   width: calc((100% - 24px * 2) / 3);
+}
+
+.portfolio-foto{
+  position: relative;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  color: #f4f4fd;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  padding-top: 40px;
+  padding-left: 32px;
+  padding-right: 32px;
+  background-color: #4D5AE5;
+  width: 100%;
+  height: 100%;
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.list-portfolio-item:hover .overlay,
+.list-portfolio-item:focus .overlay{
+  transform: translateY(0);
 }
 
 .item-portfolio {
@@ -315,6 +423,8 @@ address {
   line-height: 1.5;
   letter-spacing: 0.02em;
 }
+
+/*============FOOTER STYLES=========*/
 
 .page-footer {
   background-color: #2e2f42;
