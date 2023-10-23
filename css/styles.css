@@ -459,4 +459,47 @@ address {
 .foot-container {
   padding-left: 15px;
   padding-right: 15px;
+  display: flex;
+  align-items: baseline;
+}
+
+.logo-text-grop{
+  display: flex;
+  flex-direction: column;
+  margin-right: 120px;
+}
+
+.Social-grup-footer{
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+}
+
+.cocial-icon-grop-footer{
+  display: flex;
+  gap: 16px;
+}
+
+.title-icon{
+color: #FFF;
+font-size: 16px;
+font-weight: 500;
+line-height: 1.5;
+letter-spacing: 0.02em;
+}
+
+.cocial-icon-footer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: #4D5AE5;
+  border-radius: 50%;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cocial-icon-footer:hover,
+.cocial-icon-footer:focus{
+  background-color: #31D0AA;
 }
